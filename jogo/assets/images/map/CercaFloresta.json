@@ -1,0 +1,14 @@
+{ "columns":15,
+ "image":"forest_\/forest_ [fencesAndWalls].png",
+ "imageheight":192,
+ "imagewidth":240,
+ "margin":0,
+ "name":"CercaFloresta",
+ "spacing":0,
+ "tilecount":180,
+ "tiledversion":"1.10.0",
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset",
+ "version":"1.10"
+}
