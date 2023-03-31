@@ -66,6 +66,7 @@ class Bandit extends SimpleEnemy with ObjectCollision {
       damage: 10,
       size: Vector2(16, 16),
       animationRight: player.attackRight,
+    
     );
   }
 }

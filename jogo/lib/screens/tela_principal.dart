@@ -25,7 +25,6 @@ class TelaPrincipal extends StatelessWidget {
       ),
       cameraConfig: CameraConfig(moveOnlyMapArea: true, zoom: 2),
       player: Dinossaur(Vector2(34 * tileSize, 24 * tileSize)),
-      
     );
   }
 }

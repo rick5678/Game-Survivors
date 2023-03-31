@@ -82,7 +82,7 @@ class PlayerSpriteSheet {
       );
 
   Future<SpriteAnimation> get attackFly => SpriteAnimation.load(
-        'machete_left [iron].png',
+        'faquinha.png',
         SpriteAnimationData.sequenced(
           amount: 1,
           stepTime: 0.1,
