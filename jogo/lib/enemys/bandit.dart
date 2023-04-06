@@ -2,13 +2,14 @@ import 'dart:ui';
 
 import 'package:bonfire/bonfire.dart';
 import 'package:jogo/characters/player_sprite_sheet.dart';
+import 'package:jogo/enemys/bandit_dust.dart';
 import 'package:jogo/enemys/bandit_sprite_sheet.dart';
 
 BanditSpriteSheet bandit = BanditSpriteSheet();
 PlayerSpriteSheet player = PlayerSpriteSheet();
 
 class Bandit extends SimpleEnemy with ObjectCollision {
-  bool canMove = true;
+  static bool canMove = true;
 
   Bandit(Vector2 position)
       : super(
@@ -36,7 +37,6 @@ class Bandit extends SimpleEnemy with ObjectCollision {
 
   @override
   void update(double dt) {
-    _executeAttack();
     if (canMove) {
       seeAndMoveToPlayer(
         closePlayer: (player) {
@@ -58,6 +58,11 @@ class Bandit extends SimpleEnemy with ObjectCollision {
   @override
   void die() {
     removeFromParent();
+    gameRef.add(
+      BanditDust(
+        position + Vector2(10, 10),
+      ),
+    );
     super.die();
   }
 
@@ -65,8 +70,6 @@ class Bandit extends SimpleEnemy with ObjectCollision {
     simpleAttackMelee(
       damage: 10,
       size: Vector2(16, 16),
-      animationRight: player.attackRight,
-    
     );
   }
 }

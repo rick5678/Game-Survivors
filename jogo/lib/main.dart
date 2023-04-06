@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return GetMaterialApp(
-          title: 'Flutter Demo',
+          title: 'Dino Survivors',
           theme: androidTheme(),
           home: const MainMenu(),
         );

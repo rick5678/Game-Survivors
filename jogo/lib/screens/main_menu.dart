@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Meu Jogo',
+      title: 'Dino Survivors',
       home: MainMenu(),
     );
   }
@@ -39,7 +39,7 @@ class MainMenu extends StatelessWidget {
                   children: [
                     Text(
                       'Novo Jogo',
-                      style: Theme.of(context).textTheme.titleMedium,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                     Text(
                       'Novo Jogo',
@@ -48,14 +48,14 @@ class MainMenu extends StatelessWidget {
                   ],
                 ),
                 onTap: () {
-                  Get.to(const TelaPrincipal());
+                  Get.to(TelaPrincipal());
                 },
               ),
               Stack(
                 children: [
                   Text(
                     'Continuar',
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                   Text(
                     'Continuar',
@@ -67,7 +67,7 @@ class MainMenu extends StatelessWidget {
                 children: [
                   Text(
                     'Opções',
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                   Text(
                     'Opções',
@@ -79,7 +79,7 @@ class MainMenu extends StatelessWidget {
                 children: [
                   Text(
                     'Créditos',
-                    style: Theme.of(context).textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                   Text(
                     'Créditos',

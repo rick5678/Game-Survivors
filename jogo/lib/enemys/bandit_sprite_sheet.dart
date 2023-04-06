@@ -60,4 +60,10 @@ class BanditSpriteSheet {
           texturePosition: Vector2(160, 224),
         ),
       );
+
+  static Future<Sprite> get xpDrop => Sprite.load(
+        'banditDust_.png',
+        srcSize: Vector2(2, 2),
+        srcPosition: Vector2(158, 32),
+      );
 }

@@ -90,4 +90,14 @@ class PlayerSpriteSheet {
           texturePosition: Vector2(0, 0),
         ),
       );
+
+  Future<SpriteAnimation> get attackShurikens => SpriteAnimation.load(
+        'shuriken.png',
+        SpriteAnimationData.sequenced(
+          amount: 2,
+          stepTime: 0.1,
+          textureSize: Vector2(32, 32),
+          texturePosition: Vector2(0, 0),
+        ),
+      );
 }

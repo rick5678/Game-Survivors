@@ -7,13 +7,13 @@ ThemeData androidTheme() {
   return ThemeData(
     brightness: brightness,
     textTheme: TextTheme(
-      titleMedium: GoogleFonts.tillana(
+      titleLarge: GoogleFonts.tillana(
         fontWeight: FontWeight.bold,
         fontSize: 50,
         foreground: Paint()
           ..style = PaintingStyle.stroke
           ..strokeWidth = 5.0
-          ..color = const Color.fromARGB(255, 255, 255, 255),
+          ..color = Colors.white,
       ),
       headlineMedium: GoogleFonts.tillana(
         fontWeight: FontWeight.bold,
