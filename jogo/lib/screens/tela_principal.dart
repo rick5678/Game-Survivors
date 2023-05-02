@@ -17,6 +17,11 @@ class TelaPrincipal extends StatefulWidget {
 
 class _TelaPrincipalState extends State<TelaPrincipal> implements GameListener {
   late GameController controller;
+  bool playerReachedPoint = false;
+
+  Dinossaur player = Dinossaur(
+    Vector2(34 * tileSize, 24 * tileSize),
+  );
   @override
   void initState() {
     controller = GameController()..addListener(this);
@@ -25,9 +30,6 @@ class _TelaPrincipalState extends State<TelaPrincipal> implements GameListener {
 
   @override
   Widget build(BuildContext context) {
-    Dinossaur player = Dinossaur(
-      Vector2(34 * tileSize, 24 * tileSize),
-    );
     return BonfireWidget(
       joystick: Joystick(
         directional: JoystickDirectional(),
@@ -39,6 +41,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> implements GameListener {
           'spawn': (properties) => Bandit(
                 properties.position,
               ),
+          
           'chest': (properties) => Chest(
                 properties.position,
               ),
@@ -71,7 +74,5 @@ class _TelaPrincipalState extends State<TelaPrincipal> implements GameListener {
   }
 
   @override
-  void updateGame() {
-    // TODO: implement updateGame
-  }
+  void updateGame() {}
 }

@@ -46,6 +46,7 @@ class Bandit extends SimpleEnemy with ObjectCollision {
         margin: 1,
       );
     }
+
     super.update(dt);
   }
 
@@ -63,6 +64,7 @@ class Bandit extends SimpleEnemy with ObjectCollision {
         position + Vector2(10, 10),
       ),
     );
+
     super.die();
   }
 

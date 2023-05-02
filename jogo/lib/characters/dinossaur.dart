@@ -12,6 +12,7 @@ class Dinossaur extends SimplePlayer with ObjectCollision, TapGesture {
   double valor = 0;
   double angulo = 0;
   int nivel = 1;
+  static int level = 1;
   double experience = 0;
   List<double> speedArma = [200];
   List<String> armas = ['faquinha'];
@@ -187,6 +188,7 @@ class Dinossaur extends SimplePlayer with ObjectCollision, TapGesture {
 
     if (experience >= 100) {
       nivel++;
+      level++;
       experience = experience - 100;
 
       if (armasNvl[0] < 8) {
